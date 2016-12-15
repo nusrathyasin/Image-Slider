@@ -3,14 +3,85 @@
     <head>
 	    <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <!-- Library of Bootstrap -->
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      *****jquery************
-      <script type="text/javascript" src="jquery-1.10.1.min.js"></script>
-<script type="text/javascript" src="cycle2.js"></script>
-    
+     	    <!-- Library of jQuery -->
+            <script type="text/javascript" src="jquery-1.10.1.min.js"></script>
+            <script type="text/javascript" src="cycle2.js"></script>
+    	    <!-- Font -->
 	    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Oleo+Script+Swash+Caps" rel="stylesheet">
             <link href="style.css" rel="stylesheet" type="text/css" />
+	    <!-- Title -->
 	    <title>Image Slider</title>
-     </head>
+	    <!-- jQuery -->
+	    <script>
+		$(document).ready(function(){
+		   $("#icon").click(function(){
+   		 	$("#container").toggle();
+       		   });
+ 
+		});
+		$(window).scroll(function() {
+    		   if ($(this).scrollTop() < 350) { 
+        		$('#prev,#next').css({'display': 'none'});
+                   }
+	  	   if ($(this).scrollTop() > 350) { 
+        		$('#prev,#next').show();
+      		   }
+ 		});
+	    </script>
+    </head>
+<body>
+	<div class="container">
+		<!-- Start of header -->
+		<div id="header" >
+			<a href="#" id="nav">HOME</a>
+			<a href="#" id="nav">HOW IT WORKS</a>
+			<a href="#" id="nav">CONTACT</a>
+		</div><!-- End of header -->
+		<!-- Start of title_slider -->
+		<div id="title_slider">
+			<h1 style="font-size:130px" >IMAGE SLIDER</h1> 
+			<h2>Let's make Something new</h2>
+		</div><!-- End of title_slider -->
+		<!-- Start of icon -->
+		<div id="icon">
+			<a href="#container"><img src="https://cdn2.iconfinder.com/data/icons/arrows-3-1/512/xxx039-512.png"  class="img-responsive" /></a>
+		</div><!-- End of icon -->
+<br><br><br><br>
+	<!-- Start of Slider -->
+	<div id="container" >
+		<div id="slideshow"  class="cycle-slideshow" 
+		data-cycle-fx = "fade" 
+		data-cycle-speed = "600" 
+		data-cycle-timeout = "3000" 
+		data-cycle-pager = "#pager" 
+		data-cycle-pager-template = "<a href='#'><img src='{{src}}' height=100 width=150/>" 
+		data-cycle-next = "#next" 
+		data-cycle-prev = "#prev" 
+		data-cycle-manual-fx = "scrollHorz" 
+		data-cycle-manual-speed = "400"
+		data-cycle-pager-fx = "fade">
+			<img src="1.jpg" />
+			<img src="2.jpg" />
+			<img src="3.jpg" />
+			<img src="4.jpg" />
+			<img src="5.jpg" />
+			<img src="6.jpg" />
+			<img src="7.jpg" />
+			<img src="8.jpg" />
+			<img src="9.jpg" />
+			<img src="10.jpg" />
+			<img src="11.jpg" />
+			<img src="12.jpg" />
+			<img src="13.jpg" />
+  	</div>
+	<div id="pager"></div>
+	<img id="prev" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/3d-transparent-glass-icons-arrows/006783-3d-transparent-glass-icon-arrows-double-arrowhead-left.png" alt="prev" class="img-responsive"/>
+	<img id="next" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/3d-transparent-glass-icons-arrows/006784-3d-transparent-glass-icon-arrows-double-arrowhead-right.png" alt="next" class="img-responsive"/>
+       </div><!-- End of slider -->
+      </div>
+</body>
+</html>
