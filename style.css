@@ -105,15 +105,15 @@ body{
   z-index:100;
 }
 @media screen and (max-width: 550px) {
-  #heade{
+  #nav{
     font-size:12px;
     margin-left:25px;
     padding:2px;
 	}
- #top h1 {
+ #title_slider h1 {
     font-size:50px !important; 
   }
- #top h2 {
+ #title_slider h2 {
     font-size:30px ; 
  }
  #prev,#next{
